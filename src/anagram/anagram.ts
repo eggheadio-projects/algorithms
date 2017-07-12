@@ -21,6 +21,6 @@ function areAnagrams(s1: string, s2: string): boolean {
 console.log("listen and silent:")
 console.log(areAnagrams("listen", "silent"))
 
-console.log("for and bar:")
+console.log("foo and bar:")
 console.log(areAnagrams("foo", "bar"))
 
