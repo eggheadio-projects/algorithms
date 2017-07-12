@@ -1,7 +1,7 @@
 /**
  * Explains the bubble sort concept
  */
-export function bubbleSortConcept(array: number[]): number[] {
+function bubbleSortConcept(array: number[]): number[] {
   array = array.slice();
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length - 1; j++) {
@@ -16,7 +16,7 @@ export function bubbleSortConcept(array: number[]): number[] {
 /**
  * Idiomatic bubble sort implementation
  */
-export function bubbleSort(array: number[]): number[] {
+function bubbleSort(array: number[]): number[] {
   array = array.slice();
   while (true) {
     let swapped = false;
@@ -30,3 +30,7 @@ export function bubbleSort(array: number[]): number[] {
   }
   return array;
 }
+
+const array = [4,3,2,1]
+
+console.log(bubbleSort(array))
