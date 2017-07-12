@@ -1,7 +1,7 @@
 /**
  * Sorts an array using merge sort
  */
-export function mergeSort(array: number[]): number[] {
+function mergeSort(array: number[]): number[] {
   if (array.length <= 1) {
     return array;
   }
@@ -35,3 +35,7 @@ function merge(left: number[], right: number[]): number[] {
   }
   return array;
 }
+
+const unsortedArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+console.log(mergeSort(unsortedArray))
