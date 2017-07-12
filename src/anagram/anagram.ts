@@ -5,7 +5,7 @@
  * - 'silent' and 'listen' are anagrams
  * - 'foo' and 'bar' are not anagrams
  */
-export function areAnagrams(s1: string, s2: string): boolean {
+function areAnagrams(s1: string, s2: string): boolean {
   const charCount = new Map<string, number>();
   for (const char of s1.split('')) {
     charCount.set(char, (charCount.get(char) || 0) + 1);
@@ -16,3 +16,11 @@ export function areAnagrams(s1: string, s2: string): boolean {
   }
   return Array.from(charCount.values()).every(val => val === 0);
 }
+
+
+console.log("listen and silent:")
+console.log(areAnagrams("listen", "silent"))
+
+console.log("for and bar:")
+console.log(areAnagrams("foo", "bar"))
+
