@@ -7,7 +7,7 @@
 /**
  * Returns true if the string is a palindrome
  */
-export function isPalindrome(str: string): boolean {
+function isPalindrome(str: string): boolean {
   const reversed = str.split('').reverse().join('');
   return reversed === str;
 }
@@ -20,7 +20,7 @@ export function isPalindrome(str: string): boolean {
  * toto true
  * civil false
  */
-export function isAnyPermutationPalindrome(str: string): boolean {
+function isAnyPermutationPalindrome(str: string): boolean {
   const unmatched = new Set<string>();
   str.split('').forEach(char => {
     if (unmatched.has(char)) unmatched.delete(char);
@@ -28,3 +28,25 @@ export function isAnyPermutationPalindrome(str: string): boolean {
   });
   return unmatched.size <= 1;
 }
+
+// Output
+console.log("isPalindrome: ", "")
+console.log("civic: ", isPalindrome("civic"))
+console.log("vicic: ", isPalindrome("vicic"))
+console.log("toot: ", isPalindrome("toot"))
+console.log("to: ", isPalindrome("to"))
+
+
+console.log("isAnyPermutationPalindrome: ", "")
+console.log("civic: ", isAnyPermutationPalindrome("civic"))
+console.log("vicic: ", isAnyPermutationPalindrome("vicic"))
+console.log("toot: ", isAnyPermutationPalindrome("toot"))
+console.log("to: ", isAnyPermutationPalindrome("to"))
+
+
+
+
+
+
+
+
