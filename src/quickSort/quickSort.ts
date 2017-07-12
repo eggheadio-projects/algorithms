@@ -1,7 +1,7 @@
 /**
  * Sorts an array using quick sort
  */
-export function quickSort(array: number[]): number[] {
+function quickSort(array: number[]): number[] {
   array = array.slice();
   partition(array, 0, array.length);
   return array;
@@ -43,3 +43,7 @@ function partition(array: number[], start: number, before: number): void {
   /** Partition all the elements more than the pivot */
   partition(array, pivotRank + 1, before);
 }
+
+const unsortedArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+console.log(quickSort(unsortedArray))
